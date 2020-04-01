@@ -26,13 +26,13 @@ csvpath = os.path.join("..","Resources","budget_data.csv")
 # Open input data file
 with open(csvpath) as csvfile:
 
-    # Fead file as comma delimited
+    # Read file as comma delimited
     csvreader = csv.reader(csvfile,delimiter = ',')
 
     # Skip data contained in header (i.e., 1st row)
     next(csvreader)
 
-    # Initialize working lists:
+    # Initialize working lists
     months = []
     month_net = []
     deltas = []
@@ -50,7 +50,7 @@ for x in range(0,len(months)-1):
 max_index = deltas.index(max(deltas))
 min_index = deltas.index(min(deltas))
 
-# Collect anbd format desired entries for summary
+# Collect and format desired entries for summary
 summary_data.append("Financial Analysis         ")
 summary_data.append("----------------------------")
 summary_data.append(f"Total Months: {len(months)}")
