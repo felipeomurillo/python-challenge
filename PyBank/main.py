@@ -10,7 +10,7 @@
 # budget_data.csv > monthly recording of profits/losses
 #
 # Outputs:
-# Screen and ./Outputs/financial_summary.txt 
+# Screen and ./Analysis/financial_summary.txt 
 # ---------------------------------------------------------------
 
 # Import modules to manipulate filesystems
@@ -63,8 +63,8 @@ summary_data.append(f"Greatest Increase in Profits: {months[min_index+1]} (${del
 for i in summary_data:
     print(i)
 
-# Save a copy of the financial summary to ../Output/financial_summary.txt
-output =  os.path.join("..","Output","financial_summary.txt")
+# Save a copy of the financial summary to ../Analysis/financial_summary.txt
+output =  os.path.join("..","Analysis","financial_summary.txt")
 
 # If the Output folder does not exist, create it; if it does, use it!
 os.makedirs(os.path.dirname(output), exist_ok=True)
@@ -75,4 +75,3 @@ with open(output,"w") as txtfile:
         txtfile.write(j)
         txtfile.write("\n")
     txtfile.close()
-    
