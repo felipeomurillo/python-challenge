@@ -1,2 +1,2 @@
 # python-challenge
-Playing with financial and election data (HW#3)
+Playing with financial (PyRoll) and election data (PyPoll) (HW#3)
